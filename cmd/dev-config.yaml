@@ -1,0 +1,5 @@
+app:
+  name: sample_ws_app
+  version: 0.0.1
+  http_host: 0.0.0.0
+  http_port: 8080

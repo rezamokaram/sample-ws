@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option go_package = "github.com/rezamokaram/sample-ws/api/pb";
+
+message Message {
+    string messageType = 1 [json_name = "messageType"];
+    string data = 2 [json_name = "data"];
+}
