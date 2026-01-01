@@ -18,13 +18,13 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 0,
   "links": [],
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "df8nd2krkbev4c"
+        "uid": "ef8tpek4u0d1ca"
       },
       "fieldConfig": {
         "defaults": {
@@ -118,7 +118,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "df8nd2krkbev4c"
+        "uid": "ef8tpek4u0d1ca"
       },
       "fieldConfig": {
         "defaults": {
@@ -200,7 +200,7 @@
       "targets": [
         {
           "editorMode": "builder",
-          "expr": "process_cpu_seconds_total",
+          "expr": "rate(process_cpu_seconds_total[$__rate_interval]) * 100",
           "legendFormat": "__auto",
           "range": true,
           "refId": "cpu"
@@ -212,7 +212,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "df8nd2krkbev4c"
+        "uid": "ef8tpek4u0d1ca"
       },
       "fieldConfig": {
         "defaults": {
@@ -327,18 +327,19 @@
     }
   ],
   "preload": false,
+  "refresh": "5s",
   "schemaVersion": 42,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "go app",
+  "title": "go ws app",
   "uid": "ad7pkw7",
-  "version": 17
+  "version": 4
 }
